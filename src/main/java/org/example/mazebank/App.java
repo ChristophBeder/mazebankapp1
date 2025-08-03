@@ -1,13 +1,21 @@
 package org.example.mazebank;
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+
 /**
  * Hello world!
  *
  */
-public class App
+public class App extends Application
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    @Override
+    public void start(Stage stage) throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.show();
     }
 }
