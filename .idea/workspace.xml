@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bef2c961-71a7-4ccf-b98a-3307d5089827" name="Changes" comment="Initial Commit.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/ClientMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Client/ClientMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/ClientMenu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,11 +18,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="XML Properties File" />
-        <option value="FxmlFile" />
         <option value="package-info" />
         <option value="module-info" />
+        <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -92,6 +91,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit." />
