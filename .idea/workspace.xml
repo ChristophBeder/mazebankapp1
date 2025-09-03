@@ -4,11 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bef2c961-71a7-4ccf-b98a-3307d5089827" name="Changes" comment="Initial Commit.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/ClientMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Client/ClientMenu.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/ClientMenu.css" afterDir="false" />
+    <list default="true" id="bef2c961-71a7-4ccf-b98a-3307d5089827" name="Changes" comment="Dashboard View in Client Part Ii finished.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/AdminMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/CreateClientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/AccountsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/TransactionsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Views/AccountType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Views/AdminMenuOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Views/ClientMenuOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/AdminMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/CreateClient.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Client/Accounts.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Client/Transactions.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Accounts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/CreateClient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Transactions.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/ClientMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/ClientMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Models/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Models/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Views/ViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Views/ViewFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/Admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Client/Client.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Client/Client.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Client/ClientMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Client/ClientMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/ClientMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/ClientMenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Dashboard.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +48,7 @@
         <option value="module-info" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -41,6 +67,9 @@
     &quot;accountId&quot;: &quot;f61bb20c-a88b-463c-9634-f0424d56359c&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -50,19 +79,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.testRunning&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.testRunning"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.example.mazebank.App" />
@@ -89,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753996553491</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Dashboard View in Client Part Ii finished.">
+      <option name="closed" value="true" />
+      <created>1756905088659</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756905088659</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +143,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit." />
+    <MESSAGE value="Dashboard View in Client Part Ii finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dashboard View in Client Part Ii finished." />
   </component>
 </project>

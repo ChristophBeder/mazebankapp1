@@ -1,9 +1,8 @@
 package org.example.mazebank;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
+import org.example.mazebank.Models.Model;
 
 /**
  * Hello world!
@@ -12,10 +11,10 @@ import javafx.scene.Scene;
 public class App extends Application
 {
     @Override
-    public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
-        stage.show();
+    public void start(Stage stage){
+        System.setProperty("javafx.verbose", "true");
+        Model.getInstance().getViewFactory().showLoginWindow();
     }
+
+
 }

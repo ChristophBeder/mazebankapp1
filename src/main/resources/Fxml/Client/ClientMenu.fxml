@@ -11,8 +11,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0"
       prefWidth="180.0" styleClass="main_menu_container" stylesheets="@../../Styles/ClientMenu.css"
-      xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="org.example.mazebank.Controllers.Client.ClientMenuController">
+      xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.mazebank.Controllers.Client.ClientMenuController">
    <AnchorPane prefHeight="730.0" prefWidth="160.0" styleClass="left_container">
       <VBox prefHeight="80.0" prefWidth="160.0" styleClass="title_container" AnchorPane.leftAnchor="0.0"
             AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -50,8 +49,8 @@
       </VBox>
       <VBox prefHeight="120.0" prefWidth="130.0" styleClass="report_container" AnchorPane.bottomAnchor="0.0"
             AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
-         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Report Bug"/>
-         <Label text="Use this to report any bug or suggestion."/>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Report Suggestion/Bug?"/>
+         <Label text="Use this to report any errors or suggestions."/>
          <Button fx:id="report_btn" mnemonicParsing="false" text="Report">
             <graphic>
                <FontAwesomeIconView glyphName="PLUS"/>
