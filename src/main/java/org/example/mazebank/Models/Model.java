@@ -1,15 +1,37 @@
 package org.example.mazebank.Models;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import org.example.mazebank.Views.AccountType;
 import org.example.mazebank.Views.ViewFactory;
+
+import java.sql.ResultSet;
+import java.time.LocalDate;
 
 public class Model {
     private static Model model;
     private final ViewFactory viewFactory;
+    private final DatabaseDriver databaseDriver;
+
+    // Client Data Section
     private final Client client;
+    private boolean clientLoginSuccessFlag;
+    //private final ObservableList<Transaction> latestTransactions;
+    //private final ObservableList<Transaction> allTransactions;
+    // Admin Data Section
+    private boolean adminLoginSuccessFlag;
+    //private final ObservableList<Client> clients;
 
     private Model(){
         this.viewFactory = new ViewFactory();
-        this.client = new Client();
+        this.databaseDriver = new DatabaseDriver();
+        // Client Data Section
+        this.clientLoginSuccessFlag = false;
+        this.client = new Client("", "", "", null, null, null);
+        //this.latestTransactions = FXCollections.observableArrayList();
+        //this.allTransactions = FXCollections.observableArrayList();
+
+        this.adminLoginSuccessFlag = false;
     }
 
     public static synchronized Model getInstance(){
@@ -23,7 +45,89 @@ public class Model {
         return viewFactory;
     }
 
+    /*
+     * Client Method Section
+     * */
+    public boolean getClientLoginSuccessFlag() {return this.clientLoginSuccessFlag;}
+
+    public void setClientLoginSuccessFlag(boolean flag) {this.clientLoginSuccessFlag = flag;}
+
     public Client getClient() {
         return client;
+    }
+
+    public void evaluateClientCred(String pAddress, String password) {
+        CheckingAccount checkingAccount;
+        SavingsAccount savingsAccount;
+        ResultSet resultSet = databaseDriver.getClientData(pAddress, password);
+        try {
+            if (resultSet.isBeforeFirst()){
+                this.client.firstNameProperty().set(resultSet.getString("FirstName"));
+                this.client.lastNameProperty().set(resultSet.getString("LastName"));
+                this.client.pAddressProperty().set(resultSet.getString("PayeeAddress"));
+                String[] dateParts = resultSet.getString("Date").split("-");
+                LocalDate date = LocalDate.of(Integer.parseInt(dateParts[0]), Integer.parseInt(dateParts[1]), Integer.parseInt(dateParts[2]));
+                this.client.dateProperty().set(date);
+                checkingAccount = null;//getCheckingAccount(pAddress);
+                savingsAccount = null;//getSavingsAccount(pAddress);
+                this.client.checkingAccountProperty().set(checkingAccount);
+                this.client.savingsAccountProperty().set(savingsAccount);
+                this.clientLoginSuccessFlag = true;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    private void prepareTransactions(ObservableList<Transaction> transactions, int limit) {
+        ResultSet resultSet = databaseDriver.getTransactions(this.client.pAddressProperty().get(), limit);
+        try {
+            while (resultSet.next()){
+                String sender = resultSet.getString("Sender");
+                String receiver = resultSet.getString("Receiver");
+                double amount = resultSet.getDouble("Amount");
+                String[] dateParts = resultSet.getString("Date").split("-");
+                LocalDate date = LocalDate.of(Integer.parseInt(dateParts[0]), Integer.parseInt(dateParts[1]), Integer.parseInt(dateParts[2]));
+                String message = resultSet.getString("Message");
+                transactions.add(new Transaction(sender, receiver, amount, date, message));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    /*
+    public void setLatestTransactions() {
+        prepareTransactions(this.latestTransactions, 4);
+    }
+
+    public ObservableList<Transaction> getLatestTransactions() {
+        return latestTransactions;
+    }
+
+    public void setAllTransactions() {
+        prepareTransactions(this.allTransactions, -1);
+    }
+
+    public ObservableList<Transaction> getAllTransactions() {
+        return allTransactions;
+    } */
+
+
+    public boolean getAdminLoginSuccessFlag() {return this.adminLoginSuccessFlag;}
+
+    public void setAdminLoginSuccessFlag(boolean adminLoginSuccessFlag) {
+        this.adminLoginSuccessFlag = adminLoginSuccessFlag;
+    }
+
+    public void evaluateAdminCred(String username, String password) {
+        ResultSet resultSet = databaseDriver.getAdminData(username, password);
+        try {
+            if (resultSet.isBeforeFirst()){
+                this.adminLoginSuccessFlag = true;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
