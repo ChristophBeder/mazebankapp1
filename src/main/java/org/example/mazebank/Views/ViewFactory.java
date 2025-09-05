@@ -3,8 +3,14 @@ package org.example.mazebank.Views;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.example.mazebank.Controllers.Admin.AdminController;
 import org.example.mazebank.Controllers.Client.ClientController;
@@ -17,6 +23,8 @@ public class ViewFactory {
     private AnchorPane dashboardView;
     private AnchorPane transactionsView;
     private AnchorPane accountsView;
+    private AnchorPane clientsView;
+    private AnchorPane depositView;
 
     private final ObjectProperty <AdminMenuOptions> adminSelectedMenuItem;
     private AnchorPane createClientView;
@@ -25,6 +33,28 @@ public class ViewFactory {
         this.loginAccountType = AccountType.CLIENT;
         this.clientSelectedMenuItem = new SimpleObjectProperty<>();
         this.adminSelectedMenuItem = new SimpleObjectProperty<>();
+    }
+
+    public AnchorPane getClientsView() {
+        if (clientsView == null) {
+            try {
+                clientsView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Clients.fxml")).load();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return clientsView;
+    }
+
+    public AnchorPane getDepositView() {
+        if (depositView == null){
+            try {
+                depositView = new FXMLLoader(getClass().getResource("/Fxml/Admin/Deposit.fxml")).load();
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+        return depositView;
     }
 
     public AccountType getLoginAccountType() {
@@ -124,12 +154,32 @@ public class ViewFactory {
 
         Stage stage = new Stage();
         stage.setScene(scene);
+        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/Icon.png"))));
+        stage.setResizable(false);
         stage.setTitle("Maze Bank");
         stage.show();
     }
 
     public void closeStage(Stage stage) {
         stage.close();
+    }
+
+    public void showMessageWindow(String pAddress, String messageText) {
+        StackPane pane = new StackPane();
+        HBox hBox = new HBox(5);
+        hBox.setAlignment(Pos.CENTER);
+        Label sender = new Label(pAddress);
+        Label message = new Label(messageText);
+        hBox.getChildren().addAll(sender, message);
+        pane.getChildren().add(hBox);
+        Scene scene = new Scene(pane, 300, 100);
+        Stage stage = new Stage();
+        stage.getIcons().add(new Image(String.valueOf(getClass().getResource("/Images/icon.png"))));
+        stage.setResizable(false);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setTitle("Message");
+        stage.setScene(scene);
+        stage.show();
     }
 }
 
