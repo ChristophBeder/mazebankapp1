@@ -37,12 +37,12 @@ public class TransactionCellController implements Initializable {
     }
 
     private void transactionIcons() {
-        /*if (transaction.senderProperty().get().equals(Model.getInstance().getClient().pAddressProperty().get())){
+        if (transaction.senderProperty().get().equals(Model.getInstance().getClient().pAddressProperty().get())){
             in_icon.setFill(Color.rgb(240, 240, 240));
             out_icon.setFill(Color.RED);
         } else {
             in_icon.setFill(Color.GREEN);
             out_icon.setFill(Color.rgb(240, 240, 240));
-        } */
+        }
     }
 }

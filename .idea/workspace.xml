@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bef2c961-71a7-4ccf-b98a-3307d5089827" name="Changes" comment="Done with Part 97. Stage Icons &amp; Maximize Buttons">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Models/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Models/CheckingAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Models/DatabaseDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Models/SavingsAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/AdminMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/AdminMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/ClientMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/ClientMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Models/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Models/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mazebank.db" beforeDir="false" afterPath="$PROJECT_DIR$/mazebank.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/ClientCellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/ClientCellController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/ClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/ClientsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/CreateClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/CreateClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/DepositController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Admin/DepositController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/TransactionCellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/TransactionCellController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/TransactionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Controllers/Client/TransactionsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Models/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/mazebank/Models/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/CreateClient.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/CreateClient.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +42,12 @@
     &quot;assignee&quot;: &quot;ChristophBeder&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ChristophBeder/mazebankapp1&quot;,
-    &quot;accountId&quot;: &quot;f61bb20c-a88b-463c-9634-f0424d56359c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ChristophBeder/mazebankapp1.git",
+    "accountId": "363778a5-9aa4-4bbb-8648-d1972d699cf7"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
